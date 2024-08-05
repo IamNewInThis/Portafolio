@@ -8,34 +8,11 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 export const Projects = () => {
   const projects = [
     {
+      id: 1,
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      category:"web"
     },
   ];
 
@@ -61,10 +38,16 @@ export const Projects = () => {
                   <Nav.Link eventKey="first">Web Projects</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Movil Projects</Nav.Link>
+                  <Nav.Link eventKey="second">Proyectos de Odoo</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">IAs Projects</Nav.Link>
+                  <Nav.Link eventKey="third">Movil Projects</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="fourth">IAs Projects</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="fiveth">Proyectos de Software</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content id="slideInUp">
@@ -75,7 +58,31 @@ export const Projects = () => {
                     })}
                   </Row>
                 </Tab.Pane>
+
                 <Tab.Pane eventKey="second">
+                    <Row>
+                        {projects.map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                        })}
+                    </Row>
+                </Tab.Pane>
+                
+                <Tab.Pane eventKey="third">
+                    <Row>
+                        {projects.map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                        })}
+                    </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="fourth">
+                    <Row>
+                        {projects.map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                        })}
+                    </Row>
+                </Tab.Pane>
+
+                <Tab.Pane eventKey="fiveth">
                     <Row>
                         {projects.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;

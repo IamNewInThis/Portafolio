@@ -617,3 +617,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+/************ ProjectDetail Css ************/
+.project-detail-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  background-image: url('./assets/img/banner_projects.png'); /* Asegúrate de que la ruta es correcta */
+  padding: 100px 50px 50px 50px;      
+}
+
+.project-detail-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 53%; /* Ajusta el ancho según sea necesario */
+}
+
+.project-detail-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido dentro del card */
+  padding: 20px;
+  background: linear-gradient(135deg, #A13683, #180940);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  color: white;
+}
+
+.project-content h1 {
+  text-align: center; /* Centra el título dentro del card */
+  margin: 0;
+}
+
+.project-image {
+  width: 500px;
+  height: 300px;
+  margin-top: 20px; /* Espacio entre el título y la imagen */
+  border-radius: 8px; 
+}
+
+.project-description-card {
+  width: 45%; /* Ajusta el ancho del card de descripción */
+  padding: 20px;
+  background-color: #151515; /* Color de fondo del card de descripción */
+  border-radius: 8px;
+  color: white; /* Color del texto dentro del card de descripción */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para el card de descripción */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
