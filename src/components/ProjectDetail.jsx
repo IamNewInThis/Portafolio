@@ -3,12 +3,21 @@ import { useParams } from 'react-router-dom';
 import exampleImage from '../assets/img/example.png';
 
 const projectDetails = {
-  1: {
+  1:{
+    title: "Tienda Web",
+    description:"Una tienda web"
+  },
+  2: {
     title: "Proyecto Odoo ToolHaus",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere felis orci, tristique iaculis metus laoreet dapibus. Integer sem ex, mattis at risus vel, tincidunt viverra augue. Integer justo lacus, commodo lacinia dolor sed, sagittis auctor quam. Pellentesque aliquet mollis neque non gravida. Duis sollicitudin libero in neque dignissim, quis auctor ante consectetur. Ut eget mattis est. Pellentesque suscipit pulvinar maximus. Mauris eu augue faucibus, gravida nulla vel, luctus nibh. Etiam sodales magna lacus, vitae tempor velit varius posuere. Aliquam vitae lacinia nunc. Fusce in odio tortor. Sed ac suscipit ipsum, in imperdiet metus. Nullam rutrum nisl a elementum ultricies. Vestibulum id tincidunt purus. Aliquam at dolor mauris. Praesent posuere ultrices felis fermentum ullamcorper.",
     imgUrl: exampleImage,
   },
-  // otros proyectos...
+  3:{
+    title: "Pet Cholito",
+  },
+  4:{
+    title: "Marca de Asistencia",
+  }
 };
 
 const ProjectDetail = () => {

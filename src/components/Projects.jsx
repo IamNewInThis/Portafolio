@@ -9,10 +9,76 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Tienda Tecnologia",
+      description: "Venta & Control de stock de Tecnologia",
       imgUrl: projImg1,
-      category:"web"
+      category: "web"
+    },
+    {
+      id: 7,
+      title: "Floreria",
+      description: "Venta de Flores & Plantas",
+      imgUrl: projImg1,
+      category: "web"
+    },
+    {
+      id: 8,
+      title: "Control de Inventario",
+      description: "CRUD de Inventario",
+      imgUrl: projImg1,
+      category: "web"
+    },
+    //ERP
+    {
+      id: 2,
+      title: "ToolHaus",
+      description: "Control de Herramientas",
+      imgUrl: projImg2,
+      category: "erp"
+    },
+    {
+      id: 9,
+      title: "Servicios Bancos",
+      description: "Integrar Servicios Security & BCI",
+      imgUrl: projImg1,
+      category: "erp"
+    },
+    {
+      id: 10,
+      title: "Billetera",
+      description: "Billetera para asignar y gastar",
+      imgUrl: projImg1,
+      category: "erp"
+    },
+
+    //Mobile
+    {
+      id: 3,
+      title: "Pet Cholito",
+      description: "Busqueda & Adopcion de Mascotas",
+      imgUrl: projImg3,
+      category: "mobile"
+    },
+    {
+      id: 4,
+      title: "Marca de Asistencia",
+      description: "Marca de Asistencia",
+      imgUrl: projImg3,
+      category: "mobile"
+    },
+    {
+      id: 5,
+      title: "AI Learning",
+      description: "Proyecto de IA",
+      imgUrl: projImg1,
+      category: "ia"
+    },
+    {
+      id: 6,
+      title: "Software Management",
+      description: "Gestión de Software",
+      imgUrl: projImg2,
+      category: "software"
     },
   ];
 
@@ -22,73 +88,35 @@ export const Projects = () => {
         <Row>
           <Col>
             <h2>Projects</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav
-                variant="pills"
-                className="nav-pills mb-5 justify-content-center align-items-center"
-                id="pills-tab"
-              >
+              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
                   <Nav.Link eventKey="first">Web Projects</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Proyectos de Odoo</Nav.Link>
+                  <Nav.Link eventKey="second">ERP Projects</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Movil Projects</Nav.Link>
+                  <Nav.Link eventKey="third">Mobile Projects</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="fourth">IAs Projects</Nav.Link>
+                  <Nav.Link eventKey="fourth">IA Projects</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="fiveth">Proyectos de Software</Nav.Link>
+                  <Nav.Link eventKey="fifth">Software Projects</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content id="slideInUp">
-                <Tab.Pane eventKey="first">
-                  <Row>
-                    {projects.map((project, index) => {
-                      return <ProjectCard key={index} {...project} />;
-                    })}
-                  </Row>
-                </Tab.Pane>
-
-                <Tab.Pane eventKey="second">
+                {['web', 'erp', 'mobile', 'ia', 'software'].map((category, idx) => (
+                  <Tab.Pane eventKey={['first', 'second', 'third', 'fourth', 'fifth'][idx]}>
                     <Row>
-                        {projects.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                        })}
+                      {projects.filter(project => project.category === category).map((project) => (
+                        <ProjectCard key={project.id} {...project} />
+                      ))}
                     </Row>
-                </Tab.Pane>
-                
-                <Tab.Pane eventKey="third">
-                    <Row>
-                        {projects.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                        })}
-                    </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="fourth">
-                    <Row>
-                        {projects.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                        })}
-                    </Row>
-                </Tab.Pane>
-
-                <Tab.Pane eventKey="fiveth">
-                    <Row>
-                        {projects.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                        })}
-                    </Row>
-                </Tab.Pane>
+                  </Tab.Pane>
+                ))}
               </Tab.Content>
             </Tab.Container>
           </Col>

@@ -46,17 +46,22 @@ const Skills = () => {
 
                                 <div className='item'>
                                     <img src={meter2} alt=''></img>
-                                    <h5>Brand Identity</h5>
+                                    <h5>Python</h5>
                                 </div>
 
                                 <div className='item'>
                                     <img src={meter2} alt=''></img>
-                                    <h5>Desktop Development</h5>
+                                    <h5>JavaScript</h5>
                                 </div>
 
                                 <div className='item'>
                                     <img src={meter3} alt=''></img>
                                     <h5>Movil Development</h5>
+                                </div>
+
+                                <div className='item'>
+                                    <img src={meter3} alt=''></img>
+                                    <h5>Odoo Development</h5>
                                 </div>
                             </Carousel>
                         </div>
