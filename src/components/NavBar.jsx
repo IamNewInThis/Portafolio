@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Nav, Container, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/icons8-github(2).svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
-import logo_3_png from '../assets/img/black_logo_3_png.png';
 
 export default function NavBar() {
   const [activeLink, setActiveLink] = useState('home');
@@ -17,7 +15,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) { // Cambio a window.scrollY
+      if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -36,25 +34,32 @@ export default function NavBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+            {/* Enlaces usando react-scroll */}
             <Nav.Link
-              as={Link}
-              to="/"
+              as={ScrollLink}
+              to="home" // ID de la sección
+              smooth={true}
+              duration={500} // Duración del desplazamiento en milisegundos
               className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('home')}
             >
               Home
             </Nav.Link>
             <Nav.Link
-              as={Link}
-              to="/"
+              as={ScrollLink}
+              to="skills"
+              smooth={true}
+              duration={500}
               className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('skills')}
             >
               Skills
             </Nav.Link>
             <Nav.Link
-              as={Link}
-             to="/"
+              as={ScrollLink}
+              to="projects"
+              smooth={true}
+              duration={500}
               className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('projects')}
             >
@@ -70,9 +75,7 @@ export default function NavBar() {
             <a target="_blank" rel='noreferrer' href='https://github.com/IamNewInThis'>
               <img src={navIcon2} alt="" />
             </a>
-            <a target="_blank" rel='noreferrer' href='https://www.instagram.com/_.takeeko/'>
-              <img src={navIcon3} alt="" />
-            </a>
+
             <button className='vdd' onClick={() => console.log('connect')}>
               <span>Let's Connect</span>
             </button>
