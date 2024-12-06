@@ -654,8 +654,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-image {
   width: 500px;
   height: 300px;
-  margin-top: 20px; /* Espacio entre el título y la imagen */
+  margin-top: 20px; 
   border-radius: 8px; 
+}
+
+.project-video {
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
 .project-description-card {

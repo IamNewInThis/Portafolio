@@ -15,13 +15,6 @@ export const Projects = () => {
       category: "web"
     },
     {
-      id: 7,
-      title: "Floreria",
-      description: "Venta de Flores & Plantas",
-      imgUrl: projImg1,
-      category: "web"
-    },
-    {
       id: 8,
       title: "Control de Inventario",
       description: "CRUD de Inventario",
