@@ -632,13 +632,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 53%; /* Ajusta el ancho según sea necesario */
+  width: 53%; 
+}
+
+.project-detail-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 53%; 
 }
 
 .project-detail-card {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra el contenido dentro del card */
+  align-items: center; 
   padding: 20px;
   background: linear-gradient(135deg, #A13683, #180940);
   border-radius: 8px;
@@ -667,7 +674,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project-description-card {
-  width: 45%; /* Ajusta el ancho del card de descripción */
+  width: 90%; /* Ajusta el ancho del card de descripción */
   padding: 20px;
   background-color: #151515; /* Color de fondo del card de descripción */
   border-radius: 8px;
@@ -676,4 +683,66 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center; /* Centra el contenido verticalmente */
   justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.technologies-card {
+  width: 90%;
+  padding: 20px;
+  background: linear-gradient(135deg, #A13683, #180940);
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+.technologies-card h3 {
+  margin: 0 0 10px 0;
+}
+
+.technologies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.technology-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.technology-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.project-links{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-links  li {
+  list-style: none;
+}
+
+.project-links a {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #A13683, #180940);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  background: linear-gradient(135deg, #180940, #A13683);
 }
