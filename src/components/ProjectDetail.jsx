@@ -2,10 +2,12 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import exampleImage from '../assets/img/example.png';
 import ecommerceVideo from '../assets/videos/ecommerce_admin.mp4'
+import reduxVideo from '../assets/videos/redux.mp4'
+import task_manager from '../assets/videos/task_manager.mp4'
 
 const projectDetails = {
   1:{
-    title: "Ecommerce Next Admin",
+    title: "Ecommerce Next",
     description: "Una tienda web desarrollada con Next.js, MongoDB y S3, con autenticación Google y administración de bodega para productos, categorías y marcas.",
     videoUrl: ecommerceVideo,
     technologies: [
@@ -18,15 +20,36 @@ const projectDetails = {
     },
   },  
   2: {
-    title: "Proyecto Odoo ToolHaus",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere felis orci, tristique iaculis metus laoreet dapibus. Integer sem ex, mattis at risus vel, tincidunt viverra augue. Integer justo lacus, commodo lacinia dolor sed, sagittis auctor quam. Pellentesque aliquet mollis neque non gravida. Duis sollicitudin libero in neque dignissim, quis auctor ante consectetur. Ut eget mattis est. Pellentesque suscipit pulvinar maximus. Mauris eu augue faucibus, gravida nulla vel, luctus nibh. Etiam sodales magna lacus, vitae tempor velit varius posuere. Aliquam vitae lacinia nunc. Fusce in odio tortor. Sed ac suscipit ipsum, in imperdiet metus. Nullam rutrum nisl a elementum ultricies. Vestibulum id tincidunt purus. Aliquam at dolor mauris. Praesent posuere ultrices felis fermentum ullamcorper.",
-    imgUrl: exampleImage,
+    title: "CRUD con Redux",
+    description: "Este proyecto es un CRUD de gestión de tareas, utilizando Redux como gestor de estado. La aplicación usuarios agregar tareas, editarlas o eliminarlas.",
+    videoUrl: reduxVideo,
+    technologies: [
+      { name: "React", imageUrl: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+      { name: "Redux", imageUrl: "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" },
+    ],
+    links: {
+      github: "https://github.com/IamNewInThis/react-redux-task",
+    },
   },
   3:{
-    title: "Pet Cholito",
+    title: "Login con Angular y Supabase",
+    description: "Task Manager es una aplicación desarrollada con Angular y Supabase para organizar y gestionar tareas de manera eficiente. Actualmente, cuenta con una funcionalidad de inicio de sesión totalmente operativa, que permite a los usuarios autenticarse de forma segura utilizando Supabase como backend y Angular para la interfaz de usuario",
+    videoUrl: task_manager,
+    technologies: [
+      { name: "Angular", imageUrl: "https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" },
+      { name: "Supabase", imageUrl: "https://styles.redditmedia.com/t5_47da3l/styles/communityIcon_8wbqkp0rozjd1.jpg?format=pjpg&s=70862eec9c29aa0c25f2a6b9e708698dd03474e5" },
+    ],
+    links: {
+      github: "https://github.com/IamNewInThis/task_manager",
+    },
   },
   4:{
-    title: "Marca de Asistencia",
+    title: "ToolHaus",
+    technologies: [
+      { name: "Python", imageUrl: "https://cdn.worldvectorlogo.com/logos/python-5.svg" },
+      { name: "XML", imageUrl: "https://cdn.worldvectorlogo.com/logos/xml-2.svg" },
+      { name: "Odoo", imageUrl: "https://cdn.worldvectorlogo.com/logos/odoo.svg" },
+    ],
   }
 };
 

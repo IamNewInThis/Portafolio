@@ -2,7 +2,7 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-const ProjectCard = ({ imgUrl, title, description, id }) => {
+const ProjectCard = ({ imgUrl, title, description, id, slug }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {

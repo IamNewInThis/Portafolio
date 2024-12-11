@@ -1,7 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
+import reduxImg from "../assets/img/reduxImg.png";
+import task_manager_img from "../assets/img/task_manager_img.png";
 import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 
@@ -9,24 +10,32 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Tienda Tecnologia",
-      description: "Venta & Control de stock de Tecnologia",
+      title: "Next",
+      description: "Control de stock de Tecnologia",
       imgUrl: projImg1,
+      category: "web",
+      slug: "tienda_tecnologia"
+    },
+    {
+      id: 2,
+      title: "Redux",
+      description: "CRUD con Redux",
+      imgUrl: reduxImg,
       category: "web"
     },
     {
-      id: 8,
-      title: "Control de Inventario",
-      description: "CRUD de Inventario",
-      imgUrl: projImg1,
+      id: 3,
+      title: "Angular",
+      description: "Login con Angular y Supabase",
+      imgUrl: task_manager_img,
       category: "web"
     },
     //ERP
     {
-      id: 2,
+      id: 4,
       title: "ToolHaus",
       description: "Control de Herramientas",
-      imgUrl: projImg2,
+      imgUrl: reduxImg,
       category: "erp"
     },
     {
@@ -70,7 +79,7 @@ export const Projects = () => {
       id: 6,
       title: "Software Management",
       description: "Gestión de Software",
-      imgUrl: projImg2,
+      imgUrl: reduxImg,
       category: "software"
     },
   ];
